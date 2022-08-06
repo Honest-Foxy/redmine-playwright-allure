@@ -1,0 +1,23 @@
+{
+  "name": "redmine_playwrite_allure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "report": "allure open allure-report",
+    "generate": "npx allure generate allure-results --clean",
+    "allureserve": "npx allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.24.2",
+    "allure-commandline": "^2.18.1",
+    "allure-playwright": "^2.0.0-beta.18",
+    "randomstring": "^1.2.2"
+  },
+  "dependencies": {
+    "allure": "^0.0.0"
+  }
+}
