@@ -50,7 +50,7 @@ const config = {
       name: 'Google Chrome',
       use: {
         channel: 'chrome',
-        headless: false
+       // headless: false
       },
     },
     // {
