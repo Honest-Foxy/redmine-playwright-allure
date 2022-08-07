@@ -27,3 +27,11 @@ jobs:
         name: allure-report
         path: allure-report/
         retention-days: 30
+    - name: Create Report
+      uses: JamesIves/github-pages-deploy-action@3.1.0
+      if: always()
+      with:
+        ACCESS_TOKEN: ${{secrets.ACCES_TOKEN}}
+        BRANCH: allure-report
+        FOLDER: allure-report
+        TARGET_FOLDER: report        
