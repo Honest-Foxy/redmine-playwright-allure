@@ -44,5 +44,4 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: allure-report
-        FOLDER: allure-report
-        TARGET_FOLDER: report        
+        FOLDER: .    
