@@ -23,7 +23,7 @@ jobs:
       with:
         repository: Honest-Foxy/redmine-playwright-allure@allure-report
         path: ./docs
-      name: Copy History
+    - name: Copy History
       if: always()
       run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
     - name: Generate Allure Report
