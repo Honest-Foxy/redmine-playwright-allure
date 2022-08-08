@@ -21,7 +21,8 @@ jobs:
       run: npx playwright test
     - uses: actions/checkout@v2
       with:
-        repository: Honest-Foxy/redmine-playwright-allure@allure-report
+        repository: Honest-Foxy/redmine-playwright-allure
+        ref: allure-report
         path: ./docs
     - name: Copy History
       if: always()
