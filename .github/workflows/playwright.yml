@@ -19,6 +19,13 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+    - uses: actions/checkout@v2
+      with:
+        repository: Honest-Foxy/redmine-playwright-allure@allure-report
+        path: ./docs
+      name: Copy History
+      if: always()
+      run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
     - name: Generate Allure Report
       run: npm run generate
     - uses: actions/upload-artifact@v2
@@ -37,4 +44,6 @@ jobs:
         destination-github-username: 'Honest-Foxy'
         destination-repository-name: 'redmine-playwright-allure'
         user-email: malakhova.dariya@gmail.com
-        target-branch: allure-report  
+        target-branch: allure-report
+
+  
